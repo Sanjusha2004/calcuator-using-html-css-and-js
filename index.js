@@ -1,10 +1,6 @@
 let operator="";
 let firstNumber="";
 let secondNumber="";
-
-
-
-
 function appendNumber(num){
    if(operator===""){
     firstNumber+=num;
@@ -12,13 +8,14 @@ function appendNumber(num){
    }
    else{
     secondNumber+=num;
-    document.getElementById("result").value=secondNumber;
+    document.getElementById("result").value=firstNumber+""+operator+""+secondNumber;
    }
    
 
 }
 function setOperator(op){
-    operator=op;    
+    operator=op;   
+   document.getElementById("result").value=firstNumber+""+operator;  
 }
 function calculate(){
     let result;
